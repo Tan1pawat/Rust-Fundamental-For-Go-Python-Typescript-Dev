@@ -7,12 +7,11 @@ fn main() {
     println!("s2 = {}", s2);
 
     // Borrowing — reference instead of move
-    let s3 = String::from("world");
+    let s3 = String::from("Test");
     print_length(&s3); // borrow as immutable reference
     println!("s3 still valid: {}", s3);
 }
 
-fn print_length(s: &String) {
+fn print_length(s: &str) {
     println!("Length is {}", s.len());
 }
-
